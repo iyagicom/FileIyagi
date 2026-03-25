@@ -3,9 +3,10 @@
 ![FileIyagi](fileiyagi.png)
 
 
-⚡ A **fast, clean and lightweight** file manager for Windows and Linux.
+⚡ A **fast and responsive file manager** designed for reliable text input during file renaming and searching.
 
-Built with Qt6 to solve the Korean IME input problems found in Nautilus and other GTK file managers — renaming files and searching both work correctly in any language. The UI automatically switches between Korean and English based on the system locale.
+Enjoy high-speed browsing, keyboard-focused navigation, and smooth thumbnail previews.
+The interface automatically adapts to the system language for a seamless user experience.
 
 ---
 
