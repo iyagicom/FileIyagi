@@ -49,8 +49,7 @@ Built with Qt6 to solve the Korean IME input problems found in Nautilus and othe
 * **Window size/position saved** — restored on next launch
 * **Bookmark persistence** — saved to OS-appropriate config path (Windows: %APPDATA%, Linux: ~/.config)
 * **Real-time file detection** (Linux) — inotify-based, new files appear instantly
-* **Auto language** — Korean UI if system locale is Korean, English otherwise
-
+* **Auto language** — Future multilingual support plans: Korean if the current system language is Korean, otherwise English will be supported.
 
 ### Key Features
 
