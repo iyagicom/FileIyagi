@@ -1,95 +1,60 @@
-IYAGI PANELIYAGI LICENSE
+IYAGI SOFTWARE LICENSE AGREEMENT
 
-Copyright (c) 2026 IYAGI INC.
+Copyright (c) 2026 IYAGI INC
 All rights reserved.
 
-PanelIyagi is a proprietary panel and taskbar software
-designed exclusively for Ubuntu systems running the GNOME
-desktop environment.
+This software is distributed as executable files only.
+The source code is not publicly available.
 
-The software consists of proprietary core binaries and
-open-source GNOME Shell extension components.
+---
 
-------------------------------------------------------------
+1. PERSONAL USE
 
-1. FREE USAGE
+The Linux version of this software may be used free of charge for personal and commercial purposes.
 
-PanelIyagi may be used free of charge for personal,
-commercial, educational, governmental, and organizational use.
+---
 
-No payment or commercial agreement is required.
+2. WINDOWS VERSION
 
-------------------------------------------------------------
+The Windows version is available as a paid application via the Microsoft Store.
 
-2. SOFTWARE ARCHITECTURE AND LICENSING
+For company-wide deployment, offline installation, or volume licensing,
+a commercial license is required.
 
-The PanelIyagi core application, including the Qt6 panel,
-D-Bus engine service, and related executable components,
-is proprietary software distributed in binary form only.
+---
 
-The GNOME Shell extension component is distributed separately
-under its own open-source license (GPL-2.0-or-later).
+3. COMMERCIAL LICENSING
 
-Use, modification, and redistribution of the extension must
-follow the terms of its open-source license.
+Commercial licensing options for Windows:
 
-The proprietary licensing of the PanelIyagi core is not
-affected by the open-source licensing of the extension.
+* Single PC License: USD $12
+* 10 PCs Volume License: USD $80
+* Unlimited Company License: USD $150
 
-------------------------------------------------------------
+Custom licensing options may be available for large-scale deployments.
 
-3. REDISTRIBUTION
-
-Redistribution of the original, unmodified PanelIyagi binary
-package is permitted.
-
-Redistribution may occur via websites, Linux repositories,
-software mirrors, internal company systems, or physical media.
-
-Modified versions of the proprietary core binaries may not
-be redistributed.
-
-------------------------------------------------------------
+---
 
 4. RESTRICTIONS
 
 You may not:
 
-• Modify or create derivative works from proprietary binaries  
-• Reverse engineer, decompile, or disassemble proprietary components  
-• Extract or attempt to reconstruct source code  
-• Redistribute modified proprietary binaries  
+* Redistribute the software without permission
+* Modify or reverse engineer the software
+* Resell or sublicense the software
 
-------------------------------------------------------------
+---
 
-5. PLATFORM SCOPE
+5. NO WARRANTY
 
-PanelIyagi is intended to operate on Ubuntu Linux systems
-using the GNOME desktop environment.
+This software is provided "as is", without warranty of any kind.
+The author shall not be liable for any damages arising from the use of this software.
 
-Compatibility with other distributions or desktop environments
-is not guaranteed.
+---
 
-------------------------------------------------------------
+6. CONTACT
 
-6. TRADEMARK
+For commercial licensing inquiries:
 
-The name "PanelIyagi" and associated branding may not be used
-to promote modified software or third-party distributions
-without written permission.
-
-------------------------------------------------------------
-
-7. DISCLAIMER
-
-This software is provided "as is" without warranty of any kind.
-
-The author shall not be liable for any damages arising from
-its use or inability to use.
-
-------------------------------------------------------------
-
-8. CONTACT
-
-IYAGI INC  
-Email: iyagicom@gmail.com
+IYAGI INC
+Email: [iyagicom@gmail.com](mailto:iyagicom@gmail.com)
