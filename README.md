@@ -51,7 +51,6 @@ Built with Qt6 to solve the Korean IME input problems found in Nautilus and othe
 * **Real-time file detection** (Linux) — inotify-based, new files appear instantly
 * **Auto language** — Korean UI if system locale is Korean, English otherwise
 
----
 
 ### Key Features
 
