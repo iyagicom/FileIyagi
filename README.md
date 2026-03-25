@@ -53,6 +53,22 @@ Built with Qt6 to solve the Korean IME input problems found in Nautilus and othe
 
 ---
 
+### Key Features
+
+|                                     |                                                                          |
+| ----------------------------------- | ------------------------------------------------------------------------ |
+| 🖼 **Thumbnail Preview**            | Automatic image and video thumbnails using XDG cache                     |
+| 🔍 **Fast Search**                  | Recursive subfolder search with always-visible search bar                |
+| ⌨ **Full Korean IME Support**       | Native Qt6 input — works correctly in rename and search                  |
+| 📁 **Per-Folder View Mode**         | Each folder remembers its last view setting                              |
+| 🖱 **Mouse Back / Forward Buttons** | Natural history navigation                                               |
+| 💾 **Auto Window State Save**       | Window size and position restored on next launch                         |
+| 🌐 **Auto Language Switching**      | UI language follows system language (Korean / English)                   |
+| 🗜 **Archive Compress / Extract**   | Double-click to extract zip / tar.gz / 7z / rar, compress selected files |
+| ⚡ **Fast Loading**                  | Faster startup and browsing than Nautilus                                |
+| 🖥 **Default File Manager Support** | xdg-mime integration and file-manager mouse key support                  |
+
+
 ## 🎮 Keyboard Shortcuts
 
 | Key | Action |
