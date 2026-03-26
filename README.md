@@ -63,7 +63,8 @@ The interface automatically adapts to the system language for a seamless user ex
 | 🖱 **Mouse Back / Forward Buttons** | Natural history navigation                                               |
 | 💾 **Auto Window State Save**       | Window size and position restored on next launch                         |
 | 🌐 **Auto Language Switching**      | UI language follows system language (Korean / English)                   |
-| 🗜 **Archive Compress / Extract**   | Double-click to extract zip / tar.gz / 7z / rar, compress selected files |
+| 🗜 **Archive Compress / Extract**   | Double-click to extract zip / tar.gz / 7z / rar and automatically open extracted folder;
+compress selected files |
 | ⚡ **Fast Loading**                  | Faster startup and browsing than Nautilus                                |
 | 🖥 **Default File Manager Support** | xdg-mime integration and file-manager mouse key support                  |
 
