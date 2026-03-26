@@ -23,7 +23,7 @@ The interface automatically adapts to the system language for a seamless user ex
 
 ### View Modes
 * **Details view** — name, size, date columns with directory-first sorting
-* **Icon view** — three sizes: small (64px), medium (96px), large (128px)
+* **Icon view** — three sizes: small (96px), medium (150px), large (224px)
 * **Thumbnails** — auto-generated for images (Qt) and videos (`ffmpegthumbnailer`), XDG/platform cache
 * **Per-folder view mode** — each folder remembers its last view mode
 * **Hidden file toggle** — `Ctrl+H` or the "." button
