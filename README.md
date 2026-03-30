@@ -1,4 +1,4 @@
-# FileIyagi v1.2.0
+# FileIyagi
 
 ![FileIyagi](fileiyagi.png)
 
