@@ -1,4 +1,4 @@
-# FileIyagi (파일이야기) v1.2.0
+# FileIyagi (파일이야기) v1.3.0
 
 Windows와 Linux에서 사용할 수 있는 **빠르고 가벼운 파일 관리자**입니다.
 
