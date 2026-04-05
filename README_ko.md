@@ -1,4 +1,4 @@
-# FileIyagi (파일이야기) v1.4.0
+# FileIyagi (파일이야기) v1.5.0
 
 Windows와 Linux에서 사용할 수 있는 **빠르고 가벼운 파일 관리자**입니다.
 
@@ -179,4 +179,3 @@ Copyright (c) 2026 IYAGI INC. All rights reserved.
 
 윈도우 버전:
 Microsoft Store를 통해 배포되며, 사용 및 라이선스는 MS Store에서 관리됩니다.
-
