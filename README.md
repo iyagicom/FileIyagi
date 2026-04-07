@@ -1,111 +1,118 @@
-# FileIyagi v1.5.0
+# FileIyagi v1.9.0
 
 ![FileIyagi](fileiyagi.png)
 
-
 A **fast and lightweight file manager** for Windows and Linux.
 
-Designed for high responsiveness and stability, especially when handling **Korean text input during file renaming and search**.
+Designed for speed and responsiveness, FileIyagi ensures **stable text input for Korean file renaming and search**.
 
-Provides fast navigation, keyboard-driven workflow, and smooth thumbnail previews.  
-The interface automatically adapts to the system language for a natural user experience.
+It offers high-speed navigation, keyboard-focused workflows, and smooth thumbnail previews.  
+The interface automatically adapts to your system language for a natural user experience.
 
 ---
 
 ## ✨ Features
 
 ### Navigation
-* **Breadcrumb Path Bar** — Navigate easily with clickable path blocks
-* **Direct Path Input** — Press `Ctrl+L` to edit path (`~` supported)
-* **Copy Path** — Click current folder block to copy full path
-* **Back / Forward** — Mouse buttons 4·5 or toolbar arrows
-* **Favorites Sidebar** — Home, Desktop, Documents + custom bookmarks
-* **Devices Section** — Auto-detect drives and USB (Windows/Linux)
-* **Auto Mount Detection (Linux)** — Updates on USB connect/disconnect
-* **My Devices** — View and mount unmounted drives instantly
-* **Recent Files (RECENT)** — Per-folder recent file tracking
-* **Path History** — Stores last 15 visited paths (persistent)
+- **Breadcrumb path bar** — Navigate by clicking path segments
+- **Direct path input** — `Ctrl+L` to edit, supports `~` (home directory)
+- **Copy path** — Click current folder block to copy full path
+- **Forward / Back** — Mouse buttons 4/5 or toolbar arrows
+- **Favorites sidebar** — Home, Desktop, Documents + user bookmarks
+- **Devices section** — Auto-detect drives and USB (Windows & Linux)
+- **Auto mount detection (Linux)** — Sidebar updates on USB connect/disconnect
+- **My Devices** — View unmounted drives and mount instantly
+- **Recent files (RECENT)** — Per-folder recent file tracking
+- **Path history** — Last 15 visited paths (persistent after restart)
 
-### Dual Pane (2-Panel Mode)
-* **Toggle Dual Pane** — Status bar ◫ button
-* **Restore Last Paths** — Each pane remembers its last location
-* **Session Persistence** — Dual pane state preserved after restart
+### Dual Pane (Two-Panel Mode)
+- **Toggle dual pane** — Status bar ◫ button
+- **Restore last paths** — Each pane remembers last location
+- **Session persistence** — Dual mode state is preserved after restart
 
 ### View
-* **Details View** — Name, Size, Type, Date with sorting
-* **Icon View** — Small (96px), Medium (150px), Large (224px)
-* **Thumbnails** — Auto-generated for images & videos
-* **Per-Folder View Memory** — Remembers last view mode
-* **Hidden Files Toggle** — `Ctrl+H` or "." button
-* **Font Size Control** — `Alt + Wheel` (7–24pt)
-* **View Switching** — `Ctrl + Wheel` or `Ctrl+1~4`
-* **Quick Sort Buttons** — Name, Size, Type, Date
-* **Fixed Columns** — Only Name column is flexible
+- **Details view** — Name, Size, Type, Date (sortable columns)
+- **Icon view** — Small (96px), Medium (150px), Large (224px)
+- **Thumbnails** — Images + videos (`ffmpegthumbnailer`)
+- **Per-folder view memory**
+- **Hidden files toggle** — `Ctrl+H`
+- **Font resize** — `Alt + Mouse Wheel` (7–24pt)
+- **View switching** — `Ctrl + Wheel` or `Ctrl+1~4`
+- **Quick sorting** — Status bar buttons
+- **Fixed column layout** — Name expands, others fixed
 
 ### Search
-* **Always Visible Search Bar**
-* **Recursive Search** — Includes subfolders
-* **300ms Debounce**
-* **Open Files During Search**
-* **Drag Search Results**
-* **Optimized Layout** — Balanced columns
+- **Always-visible search bar**
+- **Recursive search** — Includes all subfolders
+- **300ms debounce**
+- **Open files during search**
+- **Drag search results**
+- **Optimized layout** — Name & Path share space
 
 ### File Operations
-* **Copy (F5)** — With sidebar-aware destination dialog
-* **Move (F6)**
-* **Delete (Del, F8)** — `Shift+Del` for instant delete
-* **Rename (F2)** — Inline edit, name-only selection
-* **New Folder (F7)**
-* **New File** — Toolbar or context menu
-* **Cut / Copy / Paste** — Full clipboard support
-* **Open With** — MIME-based + recent apps
-* **Viewer (F3)** — Built-in read-only viewer
-* **Editor (F4)** — Built-in text editor
-* **Compare (Ctrl+D)** — File A / B / Diff tabs
-* **Quick Preview (F11)** — Slide-in panel
-* **Open Terminal (F9)**
-* **Drag & Drop** — Smart behavior with visual feedback
+- **Copy (F7)** — With sidebar-based destination dialog
+- **Move (F6)**
+- **Delete (Del / Shift+Del)**
+- **Rename (F2)** — Name-only selection (excluding extension)
+- **Batch rename (F10)** — Prefix, suffix, replace, numbering
+- **New folder (Ctrl+N)**
+- **Undo (Ctrl+Z)** — Up to 20 steps
+- **New file creation**
+- **Cut / Copy / Paste** — Visual feedback included
+- **Open with** — MIME-based + recommended apps
+- **File viewer (F3)** — Read-only (text/images)
+- **File editor (F4)** — Built-in text editor
+- **File compare (Ctrl+D)** — A / B / Diff tabs
+- **Quick preview (F11)** — Slide-in panel
+- **Open terminal (F9)**
+- **Folder sync + backup (F8)** — One-way / two-way (dual pane only)
+- **Drag & drop**
   - Default: Move  
-  - Ctrl: Copy  
-  - Shift: Duplicate  
-  - Right Drag: Context menu  
-* **Properties** — File info + permissions
-* **Archive** — zip, tar.gz, tar.bz2, tar.xz
-* **Extract** — Auto-extract on double-click
+  - Alt: Copy  
+  - Shift: Duplicate (auto rename)  
+  - Right-drag: Context menu
+- **Properties** — Includes recursive file count
+- **Compression** — zip, tar.gz, tar.bz2, tar.xz
+- **Extract** — Auto folder creation on open
 
 ### Custom Toolbar Buttons
-* 3 customizable buttons
-* Right-click to set name, command, icon
-* App picker (supports system, Snap, Flatpak)
-* `%f` placeholder for selected file
-* Change default editor/terminal
+- 3 customizable buttons in title bar
+- Right-click to configure name, command, icon
+- Auto-load icons from `.desktop`
+- App picker (system + Snap + Flatpak)
+- `%f` argument support for selected file
 
 ### System
-* **Window State Save/Restore**
-* **Favorites Persistence**
-* **Real-time File Monitoring (Linux, inotify)**
-* **Executable Detection** (ELF + shebang)
-* **44 Languages UI**
+- **Window size/position persistence**
+- **Favorites saved in OS config path**
+- **Real-time file monitoring (Linux, inotify)**
+- **44-language UI auto-detection**
 
 ---
 
-## 📌 Highlights
+## 🚀 Highlights
 
 | | |
 |---|---|
-| ◫ Dual Pane | Toggle and restore last paths |
-| 🖼 Thumbnails | Image & video previews |
-| 🔍 Fast Search | Recursive, always visible |
-| ⌨ IME Support | Stable Korean input |
-| 📁 Per-Folder View | Remembers settings |
-| ✂ Clipboard Ops | Full file operations |
-| 🖱 Mouse Navigation | Back/forward buttons |
-| 💾 Window Memory | Auto restore |
-| 🌐 Multi-language | 44 languages |
-| 🗜 Archive | Compress & extract |
-| 💿 Devices | Mount & manage drives |
-| ⚡ Fast | Faster than Nautilus |
-| 🔧 Custom Buttons | User-defined actions |
+| ◫ **Dual Pane** | Toggle with status bar button |
+| ⇄ **Sync + Backup** | One-way / two-way sync (F8) |
+| 🖼 **Thumbnails** | Image & video preview |
+| 🔍 **Fast Search** | Recursive + real-time |
+| ⌨ **Perfect Korean IME Support** | Stable input (Qt6 native) |
+| 📁 **Per-folder View Memory** | Remembers last mode |
+| ✂ **Clipboard Operations** | Full cut/copy/paste |
+| ↩ **Undo (Ctrl+Z)** | Up to 20 steps |
+| 📝 **Batch Rename** | Powerful rename tool |
+| 🖱 **Mouse Navigation** | Back/forward buttons |
+| 💾 **Window Restore** | Auto save/restore |
+| 🌐 **44 Languages** | Auto UI translation |
+| 🗜 **Archive Support** | Compress & extract |
+| 💿 **Device Manager** | Mount drives easily |
+| 📂 **Recent Files** | Per-folder tracking |
+| ⚡ **Fast Loading** | Faster than Nautilus |
+| 🔧 **Custom Toolbar** | Command + icon support |
+| 🕑 **Path History** | Persistent (15 entries) |
+| ❓ **Shortcut Help** | Press F1 |
 
 ---
 
@@ -113,68 +120,73 @@ The interface automatically adapts to the system language for a natural user exp
 
 | Key | Action |
 |---|---|
+| F1 | Help |
 | F2 | Rename |
 | F3 | Viewer |
 | F4 | Editor |
-| F5 | Copy |
+| F5 | Refresh |
 | F6 | Move |
-| F7 | New Folder |
-| F8 | Delete |
-| F9 | Terminal |
-| F10 | Sort list columns, refresh list |
-| F11 | Preview |
+| F7 | Copy |
+| F8 | Sync + Backup |
+| F9 | Open Terminal |
+| F10 | Batch Rename |
+| F11 | Quick Preview |
 | Del | Delete |
-| Shift+Del | Permanent Delete |
-| Backspace | Parent folder |
+| Shift+Del | Force Delete |
+| Backspace | Up Folder |
 | Enter | Open |
-| Ctrl+L | Path input |
-| Ctrl+H | Toggle hidden |
-| Ctrl+F | Focus search |
-| Ctrl+R | Refresh |
+| Ctrl+L | Path Input |
+| Ctrl+H | Hidden Files |
+| Ctrl+F | Focus Search |
+| Ctrl+N | New Folder |
+| Ctrl+Z | Undo |
 | Ctrl+D | Compare |
 | Ctrl+X/C/V | Cut/Copy/Paste |
-| Ctrl+1~4 | View modes |
-| Ctrl+Wheel | Cycle view |
-| Alt+Wheel | Font size |
+| Ctrl+1~4 | View Modes |
+| Ctrl+Wheel | Cycle Views |
+| Alt+Wheel | Font Size |
+| Alt+Drag | Copy |
 | Alt+1~9 | Bookmarks |
-| Mouse 4/5 | Back/Forward |
-| Esc | Clear search |
+| Mouse 4/5 | Back / Forward |
+| Esc | Clear Search |
 
 ---
 
-## 🖧 Thumbnail Setup
+## 🖧 Thumbnails
 
-For video thumbnails, install `ffmpegthumbnailer`:
+To enable video thumbnails:
 
 ```bash
-# Linux
 sudo apt install ffmpegthumbnailer
 ```
----
-
-## 🖥 Supported Platforms
-
-* Windows 10 / 11 (MinGW or MSVC, Qt 6.4+)
-* Ubuntu 22.04 / 24.04 or later (GNOME Wayland / X11, Qt 6.4+)
 
 ---
 
-## 👤 Author
+## 🖥 Platforms
 
-IYAGI INC
-Email: [iyagicom@gmail.com](mailto:iyagicom@gmail.com)
-GitHub: https://github.com/iyagicom
+- Windows 10 / 11 (MinGW or MSVC, Qt 6.4+)
+- Ubuntu 22.04 / 24.04+ (Wayland / X11, Qt 6.4+)
+
+---
+
+## 👤 Developer
+
+IYAGI INC  
+Email: iyagicom@gmail.com  
+GitHub: https://github.com/iyagicom  
 
 ---
 
 ## 📜 License
+
 Copyright (c) 2026 IYAGI INC. All rights reserved.
 
-This software is provided as executable files only. Source code is not publicly available.
+This software is distributed in **binary form only**. Source code is not 공개.
 
-Linux version:
-You may use, install, package, and redistribute this software freely for any purpose, including personal, commercial, educational, governmental, and organizational use.
+### Linux Version
+Free to use, install, package, and redistribute for all purposes  
+(personal, commercial, educational, government, etc.)
 
-Windows version:
-Distributed through the Microsoft Store. Usage and licensing are managed through the MS Store.
-
+### Windows Version
+Distributed via Microsoft Store.  
+Usage and licensing are managed by the Store.
