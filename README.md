@@ -1,6 +1,6 @@
 # FileIyagi v1.9.0
 
-![FileIyagi](fileiyagi.png)
+![FileIyagi](fileiyagi2.png)
 
 A **fast and lightweight file manager** for Windows and Linux.
 
