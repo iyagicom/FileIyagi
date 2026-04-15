@@ -1,46 +1,189 @@
-# PDFIyagi v1.0.0
+# FileIyagi (파일이야기) v1.9.0
 
-Linux PDF Viewer + Anonymization Editor (Qt6 Multi-Engine)
+Windows와 Linux에서 사용할 수 있는 빠르고 가벼운 파일 관리자입니다.
 
-PDFIyagi is a **prebuilt binary application** designed for fast PDF viewing and secure document redaction.
+빠르고 반응성이 뛰어난 파일 관리자로, 한글 파일이름 변경과 검색 시 텍스트 입력이 안정적으로 작동하도록 설계되었습니다.
 
-No source distribution is provided. Only executable builds are released.
-
----
-
-## ✨ Key Features
-
-### Rendering Engine
-- Multi-engine runtime switching
-  - Qt PDF (default, fast)
-  - Poppler (accurate text extraction)
-  - MuPDF (high-quality rendering)
+고속 탐색, 키보드 중심 조작, 부드러운 썸네일 보기를 제공합니다.  
+인터페이스는 시스템 언어에 따라 자동으로 전환되어 자연스러운 사용 경험을 제공합니다.
 
 ---
 
-### Editing Tools
-- Text editing (overlay-based replacement)
-- Redaction tool (black box irreversible masking)
-- Blur tool (pixelation-based anonymization)
-- Image paste (clipboard / drag & drop)
-- Blank page insertion
+## ✨ 주요 기능
+
+### 탐색
+- 브레드크럼 경로 표시줄 — 경로를 블록으로 표시, 클릭으로 상위 폴더 이동
+- 경로 직접 입력 — Ctrl+L로 편집 모드 전환, ~ 홈 디렉토리 지원
+- 경로 복사 — 현재 폴더 블록 클릭 시 전체 경로 클립보드 복사
+- 앞으로/뒤로 — 마우스 4·5번 버튼, 툴바 ←→ 버튼으로 히스토리 탐색
+- 즐겨찾기 사이드바 — 홈·바탕화면·문서 등 기본 폴더 + 사용자 북마크
+- 장치 섹션 — 드라이브·USB 마운트 자동 표시 (볼륨 라벨 우선, Windows·Linux 공통)
+- 마운트 자동 감지 (Linux) — USB 연결·해제 시 사이드바 자동 갱신
+- 내 장치 — 사이드바에서 "내 장치" 클릭 시 마운트되지 않은 드라이브 포함 전체 목록 표시
+- 최근 파일 (RECENT) — 폴더별 최근 열람 파일 목록, 탐색 시 자동 갱신
+- 최근 경로 히스토리 — 최근 방문 경로 15개 저장, 앱 재시작 후 유지
 
 ---
 
-### Save / Export
-- Image-based PDF export only
-  - Each page rendered as image
-  - All edits flattened into output
-  - Export via QPdfWriter
-
-⚠️ Original PDF text layer is NOT preserved
+### 듀얼 패인 (2창 모드)
+- 듀얼 패인 토글 — 상태바 ◫ 버튼
+- 왼쪽 = 현재 패널 / 오른쪽 = 홈(~)
+- 마지막 경로 저장·복원
+- 세션 간 상태 유지 (ON/OFF 포함)
 
 ---
 
-### Text Extraction
-- Poppler-based extraction
-- Page / full document extraction supported
+### 보기
+- 자세히 보기 — 이름 / 크기 / 확장자 / 수정일
+- 아이콘 보기 — 96px / 150px / 224px
+- 썸네일 — 이미지 + 영상(ffmpegthumbnailer)
+- 폴더별 보기 모드 저장
+- 숨김 파일 토글 (Ctrl+H)
+- 폰트 크기 조절 (Alt+휠, 7~24pt)
+- 보기 모드 전환 (Ctrl+휠 / Ctrl+1~4)
+- 정렬 버튼 (이름 / 크기 / 확장자 / 날짜)
+- 칼럼 고정 레이아웃
 
 ---
 
-## 🖥 UI Layout
+### 검색
+- 항상 표시 검색창
+- 하위 폴더 재귀 검색
+- 300ms 디바운스
+- 검색 중 파일 열기 유지
+- 검색 결과 드래그 지원
+- 이름/위치 분할 컬럼 레이아웃
+
+---
+
+### 파일 작업
+- 복사 (F7) — 즐겨찾기 + 장치 포함 대상 선택
+- 이동 (F6)
+- 삭제 (Del / Shift+Del)
+- 이름 변경 (F2)
+- 일괄 이름 변경 (F10)
+- 새 폴더 (Ctrl+N)
+- 되돌리기 (Ctrl+Z, 최대 20단계)
+- 새 파일 생성
+- 잘라내기 / 복사 / 붙여넣기
+- 다른 앱으로 열기 (MIME 기반)
+- 파일 뷰어 (F3)
+- 파일 편집기 (F4)
+- 파일 비교 (Ctrl+D)
+- 빠른 미리보기 (F11)
+- 터미널 열기 (F9)
+- 동기화+백업 (F8, 2창 전용)
+- 드래그 앤 드롭 (이동/복사/복제)
+- 속성 (chmod 포함)
+- 압축 / 해제 (zip, tar.gz, tar.bz2, tar.xz)
+
+---
+
+### 툴바 사용자정의 버튼
+- 사용자 정의 버튼 3개
+- 우클릭으로 이름 / 명령어 / 아이콘 설정
+- .desktop 아이콘 자동 저장
+- %f 파일 인자 지원
+- Snap / Flatpak 포함 앱 선택 다이얼로그
+
+---
+
+### 시스템
+- 창 크기 / 위치 저장
+- 즐겨찾기 OS 경로 저장
+- 실시간 파일 감지 (Linux inotify)
+- 44개 언어 자동 UI 전환
+
+---
+
+## 📊 주요 기능 요약
+
+- ◫ 듀얼 패인 (2창)
+- ⇄ 동기화 + 백업 (F8)
+- 🖼 썸네일 보기
+- 🔍 빠른 검색
+- ⌨ 한글 IME 안정 지원
+- 📁 폴더별 보기 모드 기억
+- ✂ 파일 작업 전체 지원
+- ↩ Ctrl+Z 되돌리기
+- 📝 일괄 이름 변경
+- 🖱 마우스 앞/뒤 버튼 지원
+- 💾 창 상태 저장
+- 🌐 44개 언어 자동 전환
+- 🗜 압축/해제
+- 💿 장치 마운트 관리
+- 📂 폴더별 최근 파일
+- ⚡ 빠른 성능
+- 🔧 사용자 정의 툴바
+- 🕑 경로 히스토리 유지
+- ❓ F1 도움말
+
+---
+
+## 🎮 단축키
+
+| 키 | 기능 |
+|----|------|
+| F1 | 도움말 |
+| F2 | 이름 변경 |
+| F3 | 파일 뷰어 |
+| F4 | 파일 편집기 |
+| F5 | 새로고침 |
+| F6 | 이동 |
+| F7 | 복사 |
+| F8 | 동기화+백업 |
+| F9 | 터미널 |
+| F10 | 일괄 이름 변경 |
+| F11 | 미리보기 |
+| Del | 삭제 |
+| Shift+Del | 즉시 삭제 |
+| Backspace | 상위 폴더 |
+| Enter | 열기 |
+| Ctrl+L | 경로 입력 |
+| Ctrl+H | 숨김 파일 |
+| Ctrl+F | 검색 |
+| Ctrl+N | 새 폴더 |
+| Ctrl+Z | 되돌리기 |
+| Ctrl+D | 파일 비교 |
+| Ctrl+X | 잘라내기 |
+| Ctrl+C | 복사 |
+| Ctrl+V | 붙여넣기 |
+| Ctrl+1~4 | 보기 모드 |
+| Ctrl+휠 | 보기 전환 |
+| Alt+휠 | 폰트 크기 |
+| Alt+드래그 | 복사 |
+| Alt+1~9 | 북마크 |
+| 마우스 4 | 뒤로 |
+| 마우스 5 | 앞으로 |
+| Esc | 검색 초기화 |
+
+---
+
+## 🖥 지원 플랫폼
+
+- Windows 10 / 11 (Qt 6.4+)
+- Ubuntu 22.04 / 24.04 이상 (Qt 6.4+)
+
+---
+
+## 👤 개발자
+
+IYAGI INC  
+iyagicom@gmail.com  
+https://github.com/iyagicom  
+
+---
+
+## 📜 라이선스
+
+Copyright (c) 2026 IYAGI INC. All rights reserved.
+
+이 소프트웨어는 실행 파일 형태로만 제공되며 소스 코드는 공개되지 않는다.
+
+### Linux
+- 개인 / 상업 / 교육 / 기관 사용 가능
+- 재배포 및 패키징 허용
+
+### Windows
+- Microsoft Store 배포
+- Microsoft Store 라이선스 정책 적용
