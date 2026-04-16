@@ -8,195 +8,192 @@ However, these issues will be fixed soon in upcoming updates.
 현재 대규모 기능 추가가 진행 중이므로, 여러 버그가 발생할 수 있습니다.  
 하지만 이러한 문제들은 곧 업데이트를 통해 순차적으로 수정될 예정입니다.
 
-# FileIyagi v1.9.0
+# FileIyagi v1.11.0
 
-![FileIyagi](fileiyagi2.png)
+⚡ A **fast and responsive file manager** designed for reliable text input during file renaming and searching.
 
-A **fast and lightweight file manager** for Windows and Linux.
-
-Designed for speed and responsiveness, FileIyagi ensures **stable text input for Korean file renaming and search**.
-
-It offers high-speed navigation, keyboard-focused workflows, and smooth thumbnail previews.  
-The interface automatically adapts to your system language for a natural user experience.
+Enjoy high-speed browsing, keyboard-focused navigation, and smooth thumbnail previews.
+The interface automatically adapts to the system language for a seamless user experience.
 
 ---
 
 ## ✨ Features
 
 ### Navigation
-- **Breadcrumb path bar** — Navigate by clicking path segments
-- **Direct path input** — `Ctrl+L` to edit, supports `~` (home directory)
-- **Copy path** — Click current folder block to copy full path
-- **Forward / Back** — Mouse buttons 4/5 or toolbar arrows
-- **Favorites sidebar** — Home, Desktop, Documents + user bookmarks
-- **Devices section** — Auto-detect drives and USB (Windows & Linux)
-- **Auto mount detection (Linux)** — Sidebar updates on USB connect/disconnect
-- **My Devices** — View unmounted drives and mount instantly
-- **Recent files (RECENT)** — Per-folder recent file tracking
-- **Path history** — Last 15 visited paths (persistent after restart)
+* **Breadcrumb path bar** — clickable path segments for quick parent folder navigation
+* **Direct path input** — toggle edit mode with `Ctrl+L`, supports `~` for home directory
+* **Copy path** — click the current folder segment to copy the full path to clipboard
+* **Back / Forward** — mouse buttons 4 & 5, or toolbar ←→ buttons with full history stack
+* **Favorites sidebar** — standard folders + user bookmarks
+* **Device section** — auto-detected drives and USB volumes with volume labels (Windows & Linux)
+* **Auto mount detection** (Linux) — sidebar refreshes when USB is plugged or unplugged
+* **My Disk** — click "My Disk" in the sidebar to see all drives including unmounted ones; click to mount instantly
+* **Recent files** — per-folder recent file list at the bottom of the sidebar, auto-updated on navigation
+* **Recent paths history** — last 15 visited paths saved in the path-bar dropdown; persists across app restarts
 
-### Dual Pane (Two-Panel Mode)
-- **Toggle dual pane** — Status bar ◫ button
-- **Restore last paths** — Each pane remembers last location
-- **Session persistence** — Dual mode state is preserved after restart
+### Dual Pane (2-Panel Mode)
+* **Dual pane toggle** — ◫ button at the far right of the status bar; left = current panel, right = starts at home (~/)
+* **Last path remembered** — each pane restores its last visited path across sessions
+* **Session persistence** — dual pane ON/OFF state is preserved between app restarts
 
-### View
-- **Details view** — Name, Size, Type, Date (sortable columns)
-- **Icon view** — Small (96px), Medium (150px), Large (224px)
-- **Thumbnails** — Images + videos (`ffmpegthumbnailer`)
-- **Per-folder view memory**
-- **Hidden files toggle** — `Ctrl+H`
-- **Font resize** — `Alt + Mouse Wheel` (7–24pt)
-- **View switching** — `Ctrl + Wheel` or `Ctrl+1~4`
-- **Quick sorting** — Status bar buttons
-- **Fixed column layout** — Name expands, others fixed
+### View Modes
+* **Details view** — name, size, ext, date columns with directory-first sorting; click column headers to sort
+* **Icon view** — three sizes: small (96px), medium (150px), large (224px)
+* **Thumbnails** — auto-generated for images (Qt) and videos (`ffmpegthumbnailer`), XDG/platform cache; disk-cached thumbnails load instantly even during scroll or navigation
+* **Per-folder view mode** — each folder remembers its last view mode
+* **Subfolder panel (F-35)** — grid of subfolders in the current directory for quick navigation; toggle with the ⊞ status bar button or `Ctrl+Tab`
+* **Hidden file toggle** — `Ctrl+H` or the "." button
+* **Font size** — adjust live with `Alt+Wheel` (7–24pt)
+* **View mode cycling** — `Ctrl+Wheel` or `Ctrl+1–4`
+* **Sort buttons** — status bar buttons for quick sort by name / size / ext / date
+* **Fixed column widths** — size, date, and ext columns are fixed width; only the name column fills the remaining space (columns are not user-resizable)
 
 ### Search
-- **Always-visible search bar**
-- **Recursive search** — Includes all subfolders
-- **300ms debounce**
-- **Open files during search**
-- **Drag search results**
-- **Optimized layout** — Name & Path share space
+* **Always-visible search bar** — active at all times on the right side of the toolbar
+* **Recursive search** — searches all subdirectories under the current folder
+* **300 ms debounce** — starts after a short pause in typing
+* **Search-preserving file open** — opening a file from results keeps the search active
+* **Drag from search results** — drag files to other apps directly from search results
+* **Search result column layout** — name and location columns fill equally (50/50), size / ext / date are fixed width
 
 ### File Operations
-- **Copy (F7)** — With sidebar-based destination dialog
-- **Move (F6)**
-- **Delete (Del / Shift+Del)**
-- **Rename (F2)** — Name-only selection (excluding extension)
-- **Batch rename (F10)** — Prefix, suffix, replace, numbering
-- **New folder (Ctrl+N)**
-- **Undo (Ctrl+Z)** — Up to 20 steps
-- **New file creation**
-- **Cut / Copy / Paste** — Visual feedback included
-- **Open with** — MIME-based + recommended apps
-- **File viewer (F3)** — Read-only (text/images)
-- **File editor (F4)** — Built-in text editor
-- **File compare (Ctrl+D)** — A / B / Diff tabs
-- **Quick preview (F11)** — Slide-in panel
-- **Open terminal (F9)**
-- **Folder sync + backup (F8)** — One-way / two-way (dual pane only)
-- **Drag & drop**
-  - Default: Move  
-  - Alt: Copy  
-  - Shift: Duplicate (auto rename)  
-  - Right-drag: Context menu
-- **Properties** — Includes recursive file count
-- **Compression** — zip, tar.gz, tar.bz2, tar.xz
-- **Extract** — Auto folder creation on open
+* **Copy (F5)** — destination picker with Favorites & Devices sidebar; pending items can be removed from the queue with the X button; the currently copying item hides the X button automatically
+* **Move (F6)** — destination picker with Favorites & Devices sidebar
+* **Delete (Del, F8)** — with confirmation dialog; `Shift+Del` skips confirmation
+* **Rename (F2)** — inline editing, name pre-selected without extension
+* **New folder (F7)** — works from anywhere, including sidebar focus
+* **New file** — create an empty file in the current folder (toolbar button or right-click menu); preferred editor configurable via right-click on the toolbar button
+* **Cut (Ctrl+X)** — cut files with semi-transparent visual indicator; paste moves them
+* **Copy to clipboard (Ctrl+C)** — copy file(s) to clipboard for paste in other apps
+* **Paste (Ctrl+V)** — paste files; cut files are moved, copied files are duplicated; works from anywhere in the window (sidebar, toolbar, etc.) without requiring a click on the file list first
+* **Open With** — MIME-based app list with recommended apps; remembers last used app per file type
+* **Open Terminal (F9)** — open a terminal in the current folder; preferred terminal emulator configurable via right-click on the toolbar button
+* **File Viewer (F3)** — built-in read-only viewer for text and images; supports maximize button
+* **File Editor (F4)** — built-in text editor; F4 with no selection creates a new file; supports maximize button; drag-to-select auto-scroll speed is capped for comfortable use
+* **Compare Files (Ctrl+D)** — pick two files and view a 3-tab diff (File A / File B / Diff with color)
+* **Quick Preview (F11)** — slide-in preview panel showing image or text of selected file
+* **Drag & drop** — drag files to other apps (image viewers, GIMP, etc.); drag ghost matches column width
+* **Drag & drop rules** — default drag = Move (regardless of drive); Ctrl+drag = Copy; Shift+drag = Duplicate (auto-incremented name: `file (1).txt`); right-click drag = context menu (Move / Copy / Cancel); cursor feedback during drag (Move arrow / Copy ➕ / forbidden 🚫); status bar shows real-time "Moving: file.txt → folder" message
+* **Properties** — name, path, size, modification date; folder shows direct + total recursive file count; permission (chmod) change
+* **Compress** — zip / tar.gz / tar.bz2 / tar.xz formats
+* **Extract** — double-click archive to extract into a named folder and navigate into it
 
-### Custom Toolbar Buttons
-- 3 customizable buttons in title bar
-- Right-click to configure name, command, icon
-- Auto-load icons from `.desktop`
-- App picker (system + Snap + Flatpak)
-- `%f` argument support for selected file
+### Toolbar Custom Buttons
+* **3 configurable custom buttons** — in the title bar, next to the terminal button
+* **Right-click to configure** — set a name, command, and icon for each button; icon is auto-loaded from the selected app's `.desktop` entry
+* **App chooser dialog** — searchable list of all installed apps (standard paths + Snap + Flatpak); `%f` in the command is replaced with the selected file path at runtime; if `%f` is omitted the current folder is appended automatically
+* **New File / Terminal app override** — right-click either button to pick a different app from the same chooser dialog; the preference is saved and used on the next click
 
 ### System
-- **Window size/position persistence**
-- **Favorites saved in OS config path**
-- **Real-time file monitoring (Linux, inotify)**
-- **44-language UI auto-detection**
+* **Window size/position saved** — restored on next launch
+* **Bookmark persistence** — saved to OS-appropriate config path (Windows: %APPDATA%, Linux: ~/.config)
+* **Real-time file detection** (Linux) — inotify-based, new files appear instantly
+* **Executable detection** — ELF magic + shebang check (works correctly on NTFS drives)
+* **44-language UI** — auto-translated interface following system locale
 
----
+### Key Features
 
-## 🚀 Highlights
+|                                     |                                                                          |
+| ----------------------------------- | ------------------------------------------------------------------------ |
+| ◫ **Dual Pane**                     | Two-panel mode toggled by the ◫ status bar button; last paths restored   |
+| 📂 **Subfolder Panel**              | Grid of subfolders for instant navigation (F-35)                         |
+| 🖼 **Thumbnail Preview**            | Automatic image and video thumbnails using XDG cache                     |
+| 🔍 **Fast Search**                  | Recursive subfolder search with always-visible search bar                |
+| ⌨ **Full Korean IME Support**       | Native Qt6 input — works correctly in rename and search                  |
+| 📁 **Per-Folder View Mode**         | Each folder remembers its last view setting                              |
+| ✂ **Cut / Copy / Paste**           | Full clipboard file operations with visual cut indicator                 |
+| 🖱 **Mouse Back / Forward Buttons** | Natural history navigation                                               |
+| 💾 **Auto Window State Save**       | Window size and position restored on next launch                         |
+| 🌐 **44-Language UI**               | UI language follows system locale                                        |
+| 🗜 **Archive Compress / Extract**   | Double-click to extract zip / tar.gz / 7z / rar; compress selected files |
+| 💿 **My Disk**                      | View and mount all drives directly from the sidebar                      |
+| 📂 **Recent Files**                 | Per-folder recent file list in the sidebar                               |
+| ⚡ **Fast Loading**                  | Faster startup and browsing than Nautilus                                |
+| 🖥 **Default File Manager Support** | xdg-mime integration and file-manager mouse key support                  |
+| 🔧 **Custom Toolbar Buttons**       | 3 user-defined buttons with app chooser, `%f` file arg, and saved icon  |
+| 🕑 **Persistent Path History**      | Last 15 visited paths saved across restarts                              |
+| 🖱 **Smart Drag & Drop**            | Default=Move, Ctrl=Copy, Shift=Duplicate, right-click=context menu      |
 
-| | |
-|---|---|
-| ◫ **Dual Pane** | Toggle with status bar button |
-| ⇄ **Sync + Backup** | One-way / two-way sync (F8) |
-| 🖼 **Thumbnails** | Image & video preview |
-| 🔍 **Fast Search** | Recursive + real-time |
-| ⌨ **Perfect Korean IME Support** | Stable input (Qt6 native) |
-| 📁 **Per-folder View Memory** | Remembers last mode |
-| ✂ **Clipboard Operations** | Full cut/copy/paste |
-| ↩ **Undo (Ctrl+Z)** | Up to 20 steps |
-| 📝 **Batch Rename** | Powerful rename tool |
-| 🖱 **Mouse Navigation** | Back/forward buttons |
-| 💾 **Window Restore** | Auto save/restore |
-| 🌐 **44 Languages** | Auto UI translation |
-| 🗜 **Archive Support** | Compress & extract |
-| 💿 **Device Manager** | Mount drives easily |
-| 📂 **Recent Files** | Per-folder tracking |
-| ⚡ **Fast Loading** | Faster than Nautilus |
-| 🔧 **Custom Toolbar** | Command + icon support |
-| 🕑 **Path History** | Persistent (15 entries) |
-| ❓ **Shortcut Help** | Press F1 |
 
----
-
-## 🎮 Shortcuts
+## 🎮 Keyboard Shortcuts
 
 | Key | Action |
 |---|---|
-| F1 | Help |
-| F2 | Rename |
-| F3 | Viewer |
-| F4 | Editor |
-| F5 | Refresh |
-| F6 | Move |
-| F7 | Copy |
-| F8 | Sync + Backup |
-| F9 | Open Terminal |
-| F10 | Batch Rename |
-| F11 | Quick Preview |
+| F1 | Keyboard shortcuts (this window) |
+| F2 | Rename (selects name only, not extension) |
+| F3 | File Viewer (read-only, text & image) |
+| F4 | File Editor (built-in text editor; no selection = new file) |
+| F5 | Refresh + auto column width |
+| F6 | Move to folder |
+| F7 | Copy to folder |
+| F8 | Sync + Backup (dual pane only) |
+| F9 | Open terminal in current folder |
+| F10 | Batch rename |
+| F11 | Toggle quick preview panel |
+| F12 | Toggle path bar (buttons ↔ text input) |
 | Del | Delete |
-| Shift+Del | Force Delete |
-| Backspace | Up Folder |
-| Enter | Open |
-| Ctrl+L | Path Input |
-| Ctrl+H | Hidden Files |
-| Ctrl+F | Focus Search |
-| Ctrl+N | New Folder |
-| Ctrl+Z | Undo |
-| Ctrl+D | Compare |
-| Ctrl+X/C/V | Cut/Copy/Paste |
-| Ctrl+1~4 | View Modes |
-| Ctrl+Wheel | Cycle Views |
-| Alt+Wheel | Font Size |
-| Alt+Drag | Copy |
-| Alt+1~9 | Bookmarks |
-| Mouse 4/5 | Back / Forward |
-| Esc | Clear Search |
+| Shift+Del | Delete (no confirmation) |
+| Backspace / Alt+↑ | Go to parent folder |
+| Alt+← | Go back |
+| Alt+→ | Go forward |
+| Enter | Open / navigate into folder |
+| Ctrl+Tab | Toggle subfolder panel (⊞) |
+| Ctrl+L | Toggle path edit mode |
+| Ctrl+H | Toggle hidden files |
+| Ctrl+F | Focus search bar |
+| Ctrl+N | New folder |
+| Ctrl+Z | Undo last file operation |
+| Ctrl+R | Refresh |
+| Ctrl+D | Compare two files (3-tab: File A / File B / Diff) |
+| Ctrl+X | Cut |
+| Ctrl+C | Copy to clipboard |
+| Ctrl+V | Paste |
+| Ctrl+1 | Details view |
+| Ctrl+2 | Icon view (small) |
+| Ctrl+3 | Icon view (medium) |
+| Ctrl+4 | Icon view (large) |
+| Ctrl+Wheel | Cycle view modes |
+| Alt+Wheel | Adjust font size |
+| Alt+drag | Create symbolic link |
+| Alt+1~9 | Jump to bookmark 1–9 |
+| Mouse Button 4 | Back |
+| Mouse Button 5 | Forward |
+| Esc | Clear search |
 
 ---
 
-## 🖧 Thumbnails
+## 🖧 Thumbnail Setup
 
-To enable video thumbnails:
+For video thumbnails, install `ffmpegthumbnailer`:
 
 ```bash
+# Linux
 sudo apt install ffmpegthumbnailer
 ```
+---
+
+## 🖥 Supported Platforms
+
+* Windows 10 / 11 (MinGW or MSVC, Qt 6.4+)
+* Ubuntu 22.04 / 24.04 or later (GNOME Wayland / X11, Qt 6.4+)
 
 ---
 
-## 🖥 Platforms
+## 👤 Author
 
-- Windows 10 / 11 (MinGW or MSVC, Qt 6.4+)
-- Ubuntu 22.04 / 24.04+ (Wayland / X11, Qt 6.4+)
-
----
-
-## 👤 Developer
-
-IYAGI INC  
-Email: iyagicom@gmail.com  
-GitHub: https://github.com/iyagicom  
+IYAGI INC
+Email: [iyagicom@gmail.com](mailto:iyagicom@gmail.com)
+GitHub: https://github.com/iyagicom
 
 ---
 
 ## 📜 License
-
 Copyright (c) 2026 IYAGI INC. All rights reserved.
 
-This software is distributed in **binary form only**. Source code is not 공개.
+This software is provided as executable files only. Source code is not publicly available.
 
-### Linux Version
-Free to use, install, package, and redistribute for all purposes  
-(personal, commercial, educational, government, etc.)
+Linux version:
+You may use, install, package, and redistribute this software freely for any purpose, including personal, commercial, educational, governmental, and organizational use.
 
-### Windows Version
-Distributed via Microsoft Store.  
-Usage and licensing are managed by the Store.
+Windows version:
+Distributed through the Microsoft Store. Usage and licensing are managed through the MS Store.
