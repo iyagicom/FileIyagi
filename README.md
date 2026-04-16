@@ -10,6 +10,9 @@ However, these issues will be fixed soon in upcoming updates.
 
 # FileIyagi v1.11.0
 
+![FileIyagi](fileiyagi2.png)
+
+
 ⚡ A **fast and responsive file manager** designed for reliable text input during file renaming and searching.
 
 Enjoy high-speed browsing, keyboard-focused navigation, and smooth thumbnail previews.
