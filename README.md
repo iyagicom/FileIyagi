@@ -12,6 +12,13 @@ However, these issues will be fixed soon in upcoming updates.
 
 ![FileIyagi](fileiyagi2.png)
 
+🚀 Why FileIyagi
+Browse folders by flipping through them, not diving in and out
+Quickly navigate subfolders using Ctrl+Tab
+Dual-pane workflow with uninterrupted file operations
+Frequently used actions are one click away via icons
+👉 File operations feel faster and more fluid
+👉 Once you get used to it, it's hard to go back
 
 ⚡ A **fast and responsive file manager** designed for reliable text input during file renaming and searching.
 
