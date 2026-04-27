@@ -7,18 +7,10 @@ However, these issues will be fixed soon in upcoming updates.
 **KR**  
 현재 대규모 기능 추가가 진행 중이므로, 여러 버그가 발생할 수 있습니다.  
 하지만 이러한 문제들은 곧 업데이트를 통해 순차적으로 수정될 예정입니다.
+# FileIyagi v1.13.0
 
-# FileIyagi v1.11.0
+![FileIyagi](fileiyagi.png)
 
-![FileIyagi](fileiyagi2.png)
-
-🚀 Why FileIyagi
-Browse folders by flipping through them, not diving in and out
-Quickly navigate subfolders using Ctrl+Tab
-Dual-pane workflow with uninterrupted file operations
-Frequently used actions are one click away via icons
-👉 File operations feel faster and more fluid
-👉 Once you get used to it, it's hard to go back
 
 ⚡ A **fast and responsive file manager** designed for reliable text input during file renaming and searching.
 
@@ -100,6 +92,8 @@ The interface automatically adapts to the system language for a seamless user ex
 * **Real-time file detection** (Linux) — inotify-based, new files appear instantly
 * **Executable detection** — ELF magic + shebang check (works correctly on NTFS drives)
 * **44-language UI** — auto-translated interface following system locale
+* **Set as default file manager** — click the app icon in the title bar; the popup includes a "Set as Default" button that registers FileIyagi via `xdg-mime` and `gsettings` in one click; button turns green and disables itself when already set
+* **Browser Save-As dialog support** — FileIyagi implements the XDG Desktop Portal `FileChooser` backend; Chrome and other apps that use the portal open their "Save As" dialog directly inside FileIyagi, with a file name input field and a full save-location picker
 
 ### Key Features
 
@@ -119,7 +113,8 @@ The interface automatically adapts to the system language for a seamless user ex
 | 💿 **My Disk**                      | View and mount all drives directly from the sidebar                      |
 | 📂 **Recent Files**                 | Per-folder recent file list in the sidebar                               |
 | ⚡ **Fast Loading**                  | Faster startup and browsing than Nautilus                                |
-| 🖥 **Default File Manager Support** | xdg-mime integration and file-manager mouse key support                  |
+| 🖥 **Default File Manager** | One-click setup via title bar icon; `xdg-mime` + `gsettings` registered automatically |
+| 💾 **Browser Save-As Support** | XDG Portal FileChooser backend — Chrome "Save As" opens inside FileIyagi |
 | 🔧 **Custom Toolbar Buttons**       | 3 user-defined buttons with app chooser, `%f` file arg, and saved icon  |
 | 🕑 **Persistent Path History**      | Last 15 visited paths saved across restarts                              |
 | 🖱 **Smart Drag & Drop**            | Default=Move, Ctrl=Copy, Shift=Duplicate, right-click=context menu      |
@@ -207,3 +202,4 @@ You may use, install, package, and redistribute this software freely for any pur
 
 Windows version:
 Distributed through the Microsoft Store. Usage and licensing are managed through the MS Store.
+
