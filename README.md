@@ -7,7 +7,8 @@ However, these issues will be fixed soon in upcoming updates.
 **KR**  
 현재 대규모 기능 추가가 진행 중이므로, 여러 버그가 발생할 수 있습니다.  
 하지만 이러한 문제들은 곧 업데이트를 통해 순차적으로 수정될 예정입니다.
-# FileIyagi v1.13.0
+
+# FileIyagi v1.14.0
 
 ![FileIyagi](fileiyagi.png)
 
@@ -164,6 +165,38 @@ The interface automatically adapts to the system language for a seamless user ex
 | Mouse Button 4 | Back |
 | Mouse Button 5 | Forward |
 | Esc | Clear search |
+
+---
+
+## 🚀 Installation
+
+### Linux — zip (all distros)
+
+1. Download `FileIyagi-vX.X.X-linux-x64.zip` and extract it
+2. Run:
+   ```bash
+   bash install.sh
+   ```
+   Installs the binary to `~/.local/bin/`, registers the icon and `.desktop` file, sets FileIyagi as the default file manager, and configures the XDG Portal FileChooser backend for browser Save-As dialogs.
+
+**Qt6 required** — install if missing:
+
+| Distro | Command |
+|--------|---------|
+| Ubuntu / Debian | `sudo apt install libqt6core6 libqt6widgets6 libqt6sql6 libqt6dbus6` |
+| Fedora | `sudo dnf install qt6-qtbase qt6-qtsql` |
+| Arch Linux | `sudo pacman -S qt6-base` |
+| openSUSE | `sudo zypper install libqt6-qtbase` |
+
+### Linux — deb (Ubuntu / Debian)
+
+```bash
+sudo dpkg -i fileiyagi_X.X.X_amd64.deb
+```
+
+### Windows
+
+Available on the [Microsoft Store](https://apps.microsoft.com/search?query=FileIyagi).
 
 ---
 
