@@ -8,7 +8,7 @@ However, these issues will be fixed soon in upcoming updates.
 현재 대규모 기능 추가가 진행 중이므로, 여러 버그가 발생할 수 있습니다.  
 하지만 이러한 문제들은 곧 업데이트를 통해 순차적으로 수정될 예정입니다.
 
-# FileIyagi v1.14.0
+# FileIyagi v1.17.0
 
 ![FileIyagi](fileiyagi.png)
 
@@ -23,7 +23,8 @@ The interface automatically adapts to the system language for a seamless user ex
 ## ✨ Features
 
 ### Navigation
-* **Breadcrumb path bar** — clickable path segments for quick parent folder navigation
+* **Breadcrumb path bar** — clickable path segments for quick parent folder navigation; click empty area to enter path edit mode
+* **Single-click folder open** — ① toolbar toggle button; when enabled, single-clicking a folder navigates into it
 * **Direct path input** — toggle edit mode with `Ctrl+L`, supports `~` for home directory
 * **Copy path** — click the current folder segment to copy the full path to clipboard
 * **Back / Forward** — mouse buttons 4 & 5, or toolbar ←→ buttons with full history stack
@@ -119,6 +120,7 @@ The interface automatically adapts to the system language for a seamless user ex
 | 🔧 **Custom Toolbar Buttons**       | 3 user-defined buttons with app chooser, `%f` file arg, and saved icon  |
 | 🕑 **Persistent Path History**      | Last 15 visited paths saved across restarts                              |
 | 🖱 **Smart Drag & Drop**            | Default=Move, Ctrl=Copy, Shift=Duplicate, right-click=context menu      |
+| ① **Single-Click Folder Open**      | Toolbar toggle; single-click navigates into folders                      |
 
 
 ## 🎮 Keyboard Shortcuts
