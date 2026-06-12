@@ -236,5 +236,6 @@ Linux version:
 You may use, install, package, and redistribute this software freely for any purpose, including personal, commercial, educational, governmental, and organizational use.
 
 Windows version:
+https://apps.microsoft.com/detail/9NWGF77VZ929
 Distributed through the Microsoft Store. Usage and licensing are managed through the MS Store.
 
