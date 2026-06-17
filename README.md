@@ -1,4 +1,4 @@
-# FileIyagi v1.45.8
+# FileIyagi v1.46.3
 
 ![FileIyagi](fileiyagi.png)
 
@@ -77,6 +77,7 @@ The interface automatically adapts to the system language for a seamless user ex
 * **File Editor (F4)** — built-in text editor; F4 with no selection creates a new file; supports maximize button; drag-to-select auto-scroll speed is capped for comfortable use
 * **Compare Files (Ctrl+D)** — pick two files and view a 3-tab diff (File A / File B / Diff with color)
 * **Quick Preview (F11)** — slide-in preview panel showing image or text of selected file
+* **Drag to select** — drag over files to select them, just like on Android; unlike most file managers, dragging does not accidentally move files
 * **Drag & drop** — drag files to other apps (image viewers, GIMP, etc.); drag ghost matches column width
 * **Drag & drop rules** — default drag = Move (regardless of drive); Ctrl+drag = Copy; Shift+drag = Duplicate (auto-incremented name: `file (1).txt`); right-click drag = context menu (Move / Copy / Cancel); cursor feedback during drag (Move arrow / Copy ➕ / forbidden 🚫); status bar shows real-time "Moving: file.txt → folder" message
 * **Properties** — name, path, size, modification date; folder shows direct + total recursive file count; permission (chmod) change
@@ -123,6 +124,7 @@ The interface automatically adapts to the system language for a seamless user ex
 | 🖥 **Default File Manager** | One-click setup via title bar icon; `xdg-mime` + `gsettings` registered automatically |
 | 🌐 **Browser File Picker (Linux)**  | XDG Portal FileChooser backend — Chrome/Firefox file dialogs open inside FileIyagi |
 | 🪟 **Browser File Picker (Windows)** | COM CLSID intercept — Chrome/Edge file attach dialogs open inside FileIyagi |
+| 🔢 **Auto-increment Save Name (v1.46.0)** | Click a file in the Save dialog to auto-suggest the next name — e.g. click `276-21 주1동.pdf` → suggests `276-21 주2동.pdf` |
 | 🔧 **Custom Toolbar Buttons**       | 3 user-defined buttons with app chooser, `%f` file arg, and saved icon  |
 | 🕑 **Persistent Path History**      | Last 15 visited paths saved across restarts                              |
 | 🖱 **Smart Drag & Drop**            | Default=Move, Ctrl=Copy, Shift=Duplicate, right-click=context menu      |
@@ -153,6 +155,7 @@ The interface automatically adapts to the system language for a seamless user ex
 | Backspace / Alt+↑ | Go to parent folder |
 | Alt+← | Go back |
 | Alt+→ | Go forward |
+| Drag over files | Select files like on Android — no accidental move |
 | Enter | Open / navigate into folder |
 | Ctrl+S | Cycle window size (3 steps: compact / medium / large) |
 | Ctrl+Tab | Toggle subfolder panel (⊞) |
@@ -239,6 +242,15 @@ sudo apt install ffmpegthumbnailer
 ---
 
 ## 📋 Changelog
+
+### v1.46.3 (2026-06-17)
+- **Save dialog auto-increment** — clicking a file in the Save dialog auto-suggests the next name (`abc.pdf` → `abc2.pdf`, `abc9.pdf` → `abc10.pdf`); extension is preserved automatically
+- **Save dialog extension preserve** — typing a name without extension keeps the original file's extension; typing `.xxx` overrides it
+- **Save dialog default filename** — calling apps (Chrome, PdfIyagi) now pass their suggested filename; picker stays on top of the calling window (no more falling behind Chrome)
+- **Alt+1~9 bookmark jump** — press Alt and a number to jump directly to bookmark 1~9; sidebar shows number hints while Alt is held
+- **PDF viewer (Windows)** — built-in PDF viewer using Qt6 `QPdfDocument`; page navigation and zoom support
+- **File viewer themes** — Monokai and Dark themes for the built-in text viewer/editor (F3/F4)
+- **Drag to select** — drag over files to select them like on Android; unlike other file managers, dragging does not move files accidentally
 
 ### v1.45.8 (2026-06-14)
 - **Bug fix** — Font size and row height slider changes not reflected in file view
