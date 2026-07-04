@@ -1,4 +1,4 @@
-# FileIyagi v1.46.3
+# FileIyagi v1.47.10
 
 ![FileIyagi](fileiyagi.png)
 
@@ -44,7 +44,8 @@ The interface automatically adapts to the system language for a seamless user ex
 * **Font size** — adjust live with `Alt+Wheel` (7–24pt)
 * **View mode cycling** — `Ctrl+Wheel` or `Ctrl+1–5`
 * **Sort buttons** — status bar buttons for quick sort by name / size / ext / date
-* **Fixed column widths** — size, date, and ext columns are fixed width; only the name column fills the remaining space (columns are not user-resizable)
+* **Font-proportional column widths** — the size, date, and ext columns scale with the current font size (optimized around 11 pt); increasing the font widens the columns so text is never clipped, decreasing it narrows them. The name column fills the remaining space
+* **EXT4 partition browser (Windows)** — a Linux user working on Windows can open and read files from their EXT4 (Linux) partitions; requires administrator mode. Read-only. The EXT4 view behaves like a normal folder view — all view modes (Ctrl+1–5) render identically, and sorting by name / size / date (Ctrl+6–8) works with folders listed first
 
 ### Search
 * **Always-visible search bar** — active at all times on the right side of the toolbar
@@ -95,9 +96,10 @@ The interface automatically adapts to the system language for a seamless user ex
 * **Bookmark persistence** — saved to OS-appropriate config path (Windows: %APPDATA%, Linux: ~/.config)
 * **Real-time file detection** (Linux) — inotify-based, new files appear instantly
 * **Executable detection** — ELF magic + shebang check (works correctly on NTFS drives)
-* **44-language UI** — auto-translated interface following system locale
+* **12-language UI** — English, Korean, Japanese, Chinese, German, Spanish, French, Portuguese, Russian, Turkish, Vietnamese, Indonesian; follows the system locale automatically
 * **Set as default file manager** — click the app icon in the title bar; the popup includes a "Set as Default" button that registers FileIyagi via `xdg-mime` and `gsettings` in one click; button turns green and disables itself when already set
-* **Browser File Picker — FileIyagi opens instead of the standard Windows file dialog when selecting files in Chrome, Edge, or Firefox.
+* **System-wide File Open / Save dialog (Windows)** — once the file-dialog picker is registered, **every** application's file Open **and** Save dialog opens FileIyagi instead of the standard Windows dialog — Chrome, Edge, PDFIyagi, and most Win32 / Electron / Qt apps. Registered per-user (HKCU), no admin rights needed. This is a separate toggle from Explorer right-click integration, so it can be turned off on its own
+* **Smart system-dialog fallback (Windows)** — sandboxed / packaged apps (Notepad, Media Player, and other UWP / WinUI apps) and legacy apps that cannot handle a custom dialog (e.g. Illustrator CC2015) automatically get the genuine Windows dialog instead — forwarded straight to `comdlg32.dll`, fully transparent to the app. The exclusion list is user-extensible via the registry: `HKCU\Software\IYAGI-INC\FileIyagi\pickerExcludedApps` (REG_SZ, `;`-separated exe names)
 
 ### Key Features
 
@@ -112,7 +114,7 @@ The interface automatically adapts to the system language for a seamless user ex
 | ✂ **Cut / Copy / Paste**           | Full clipboard file operations with visual cut indicator                 |
 | 🖱 **Mouse Back / Forward Buttons** | Natural history navigation                                               |
 | 💾 **Auto Window State Save**       | Window size and position restored on next launch                         |
-| 🌐 **44-Language UI**               | UI language follows system locale                                        |
+| 🌐 **12-Language UI**               | UI language follows system locale                                        |
 | 🗜 **Archive Compress / Extract**   | Double-click to extract zip / tar.gz / 7z / rar; compress selected files |
 | 💿 **My Disk**                      | View and mount all drives directly from the sidebar                      |
 | 🌐 **Connect to Server**            | Mount SFTP / SMB / FTP / WebDAV / iPhone / Bluetooth via GVFS; history saved |
@@ -122,8 +124,9 @@ The interface automatically adapts to the system language for a seamless user ex
 | 📂 **Recent Files**                 | Per-folder recent file list in the sidebar                               |
 | ⚡ **Fast Loading**                  | Faster startup and browsing than Nautilus                                |
 | 🖥 **Default File Manager** | One-click setup via title bar icon; `xdg-mime` + `gsettings` registered automatically |
-| 🌐 **Browser File Picker (Linux)**  | XDG Portal FileChooser backend — Chrome/Firefox file dialogs open inside FileIyagi |
-| 🪟 **Browser File Picker (Windows)** | COM CLSID intercept — Chrome/Edge file attach dialogs open inside FileIyagi |
+| 🌐 **File Picker (Linux)**  | XDG Portal FileChooser backend — every app's Open/Save dialog opens inside FileIyagi |
+| 🪟 **File Open/Save Dialog (Windows)** | COM CLSID intercept — **every** app's Open **and** Save dialog opens inside FileIyagi |
+| 🐧 **EXT4 Partition Browser (Windows)** | Read Linux EXT4 partitions from Windows (admin mode); full view modes + sorting like a normal folder |
 | 🔢 **Auto-increment Save Name (v1.46.0)** | Click a file in the Save dialog to auto-suggest the next name — e.g. click `276-21 주1동.pdf` → suggests `276-21 주2동.pdf` |
 | 🔧 **Custom Toolbar Buttons**       | 3 user-defined buttons with app chooser, `%f` file arg, and saved icon  |
 | 🕑 **Persistent Path History**      | Last 15 visited paths saved across restarts                              |
@@ -242,6 +245,22 @@ sudo apt install ffmpegthumbnailer
 ---
 
 ## 📋 Changelog
+
+### v1.47.11 (2026-07-05)
+- **Complete 12-language UI** — all 682 UI strings professionally re-translated for 10 languages (German, Spanish, French, Indonesian, Portuguese, Russian, Turkish, Vietnamese + new: **Japanese, Chinese**); Korean also completed (311 previously missing strings, including the entire Settings dialog). New `tools/gpt_translate.py` export/import pipeline with placeholder validation replaces raw machine translation
+- **Font size range widened** — Ctrl+↑/↓ / Alt+Wheel / Settings slider now allow the full documented 7–24 pt range (previously capped at base ±5, which silently stopped at 16 pt)
+
+### v1.47.10 (2026-07-04)
+- **Qt apps (QGIS, etc.) now receive picked files correctly** — the picker COM dialog now honors the `IFileDialogEvents::OnFileOk` contract. Qt's native dialog helper only accepts a result if it can read it during the `OnFileOk` event; without it, every Qt app silently treated a successful pick as *Cancel*. The event sink registered via `Advise()` is now stored and `OnSelectionChange` + `OnFileOk` are fired on success
+- **Sandboxed / packaged apps fall back to the system dialog** — UWP / WinUI file pickers run inside an AppContainer broker process that cannot launch the full-trust FileIyagi picker (Notepad showed an empty result, Media Player crashed). AppContainer / packaged processes are now detected (`TokenIsAppContainer` + `GetCurrentPackageFullName`) and forwarded to the genuine `comdlg32.dll` implementation
+- **App exclusion list** — apps that cannot handle a custom dialog get the genuine system dialog; extensible via `HKCU\Software\IYAGI-INC\FileIyagi\pickerExcludedApps` (REG_SZ, `;`-separated)
+- **Picker debug log** — `%TEMP%\picker_debug.log` now appends with a timestamp and the host process name per invocation (previously overwritten each time), so failures can be correlated with the calling app
+
+### v1.47.0 (2026-07-04)
+- **System-wide file dialog (Windows)** — the FileIyagiPicker COM component now intercepts **every** application (not just browsers), so any app's file Open dialog opens FileIyagi. Added **Save dialog** support (`CLSID_FileSaveDialog`) — Save-As dialogs also open FileIyagi. FileIyagi's own picker process is the only one excluded (recursion guard)
+- **Font-proportional column widths** — Details / search / recent / starred / EXT4 column widths now scale with the font size instead of being fixed at 11 pt, so larger fonts no longer clip text
+- **EXT4 partition view parity (Windows)** — the read-only EXT4 Linux-partition browser now behaves like a normal folder view: icon / list modes (Ctrl+1–5) use the same thumbnail delegate and rendering, and sorting by name / size / date (Ctrl+6–8) works correctly (numeric size, chronological date, folders first)
+- **EXT4 breadcrumb path bar (Windows)** — the EXT4 view's path bar is now a clickable breadcrumb (like a normal folder) instead of a plain text field; click any segment to jump to that parent folder, including a leading `/` for the partition root
 
 ### v1.46.3 (2026-06-17)
 - **Save dialog auto-increment** — clicking a file in the Save dialog auto-suggests the next name (`abc.pdf` → `abc2.pdf`, `abc9.pdf` → `abc10.pdf`); extension is preserved automatically
