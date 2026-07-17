@@ -1,4 +1,4 @@
-# FileIyagi v1.47.10
+# FileIyagi v1.52.0
 
 ![FileIyagi](fileiyagi.png)
 
@@ -23,13 +23,17 @@ The interface automatically adapts to the system language for a seamless user ex
 * **Device section** — auto-detected drives and USB volumes with volume labels (Windows & Linux)
 * **Auto mount detection** (Linux) — sidebar refreshes when USB is plugged or unplugged
 * **My Disk** — click "My Disk" in the sidebar to see all drives including unmounted ones; click to mount instantly
-* **Connect to Server** (Linux) — click "+ Connect to Server..." in the sidebar to mount SFTP, SMB/Samba, FTP, WebDAV, iPhone (AFC), or Bluetooth OBEX via GVFS; connection history saved for quick reconnect; right-click connected item to disconnect
+* **Connect to Server** — click "+ Connect to Server..." in the sidebar to connect to SFTP, SMB/Samba, FTP, or WebDAV. Linux mounts them via GVFS (also supports iPhone/AFC and Bluetooth OBEX); Windows connects SMB/WebDAV as native UNC paths and browses SFTP/FTP through a dedicated virtual view with full file operations (view/edit/upload/download/delete). Connection history with encrypted password storage is saved for quick reconnect; right-click a connection to disconnect
 * **Android / Camera / Network mounts in sidebar** — all GVFS-mounted devices (MTP, gphoto2, SFTP, SMB, etc.) appear automatically in the sidebar after connection
 * **Recent files** — per-folder recent file list at the bottom of the sidebar, auto-updated on navigation
 * **Recent paths history** — last 15 visited paths saved in the path-bar dropdown; persists across app restarts
 
-### Dual Pane (2-Panel Mode)
-* **Dual pane toggle** — ◫ button at the far right of the status bar; left = current panel, right = starts at home (~/)
+### Multi-Panel (2/3/4-Pane Mode)
+* **Dual pane toggle** — ◫ button at the far right of the status bar (`F1`); left = current panel, right = starts at home (~/)
+* **Chain split to 3/4 panes** — the 2nd panel's ◫ button opens a 3rd pane, the 3rd panel's opens a 4th; unchecking a button closes the panes to its right, and turning dual pane off (`F1`) closes them all
+* **Per-count layout memory** — splitter ratios and each pane's path are saved separately for 2, 3 and 4-pane layouts
+* **Enlarge active pane (option)** — enable in Settings → "Multi-pane" to make the focused pane 1.5× wider than the others in 3/4-pane mode (off by default)
+* **Ctrl+S window sizing** — the 3-stage window size cycle scales with the pane count in 3/4-pane mode (clamped to the screen)
 * **Last path remembered** — each pane restores its last visited path across sessions
 * **Session persistence** — dual pane ON/OFF state is preserved between app restarts
 
@@ -54,6 +58,7 @@ The interface automatically adapts to the system language for a seamless user ex
 * **Search-preserving file open** — opening a file from results keeps the search active
 * **Drag from search results** — drag files to other apps directly from search results
 * **Search result column layout** — name / size / ext / date columns; folder nodes are shown as non-selectable group headers (location column replaced by tree structure)
+* **Thumbnail view for search results** — view modes (Ctrl+2–5) now apply during search; in icon/thumbnail views, folder names become full-width group headers with file thumbnails beneath them (copy / move / delete / preview / drag all work the same)
 
 ### File Operations
 * **Copy (F5)** — destination picker with Favorites & Devices sidebar; pending items can be removed from the queue with the X button; the currently copying item hides the X button automatically
@@ -80,10 +85,11 @@ The interface automatically adapts to the system language for a seamless user ex
 * **Quick Preview (F11)** — slide-in preview panel showing image or text of selected file
 * **Drag to select** — drag over files to select them, just like on Android; unlike most file managers, dragging does not accidentally move files
 * **Drag & drop** — drag files to other apps (image viewers, GIMP, etc.); drag ghost matches column width
-* **Drag & drop rules** — default drag = Move (regardless of drive); Ctrl+drag = Copy; Shift+drag = Duplicate (auto-incremented name: `file (1).txt`); right-click drag = context menu (Move / Copy / Cancel); cursor feedback during drag (Move arrow / Copy ➕ / forbidden 🚫); status bar shows real-time "Moving: file.txt → folder" message
+* **Drag & drop rules** — default drag = Move (regardless of drive); Ctrl+drag = Copy; Shift+drag = Duplicate (auto-incremented name: `file (1).txt`); right-click drag = context menu (Move / Copy / Shortcut / Cancel); dropping a single file or folder also offers "Shortcut" (symbolic link) after Copy / Move; cursor feedback during drag (Move arrow / Copy ➕ / forbidden 🚫); status bar shows real-time "Moving: file.txt → folder" message
 * **Properties** — name, path, size, modification date; folder shows direct + total recursive file count; permission (chmod) change
 * **Compress** — zip / tar.gz / tar.bz2 / tar.xz formats
 * **Extract** — double-click archive to extract into a named folder and navigate into it
+* **Basket (Alt+B)** — collect files from multiple folders (right-click → "Add to Basket" or `Alt+B`), then compress / copy / move / delete them all at once from the 🧺 status-bar button popup; items removed from disk are pruned automatically
 
 ### Toolbar Custom Buttons
 * **3 configurable custom buttons** — in the title bar, next to the terminal button
@@ -116,8 +122,9 @@ The interface automatically adapts to the system language for a seamless user ex
 | 💾 **Auto Window State Save**       | Window size and position restored on next launch                         |
 | 🌐 **12-Language UI**               | UI language follows system locale                                        |
 | 🗜 **Archive Compress / Extract**   | Double-click to extract zip / tar.gz / 7z / rar; compress selected files |
+| 🧺 **Basket**                       | Collect files across folders → compress / copy / move / delete in one go (Alt+B) |
 | 💿 **My Disk**                      | View and mount all drives directly from the sidebar                      |
-| 🌐 **Connect to Server**            | Mount SFTP / SMB / FTP / WebDAV / iPhone / Bluetooth via GVFS; history saved |
+| 🌐 **Connect to Server**            | SFTP / SMB / FTP / WebDAV on both Windows and Linux (Linux adds iPhone/Bluetooth via GVFS); history saved |
 | 🔒 **Open as Administrator**        | Relaunch with pkexec for elevated folder access (Linux)                  |
 | 🪟 **Open in New Window**           | Right-click folder to open it in a new FileIyagi instance                |
 | 📀 **Burn to Disc**                 | Right-click files → launch brasero/k3b if installed (Linux)             |
@@ -188,6 +195,7 @@ The interface automatically adapts to the system language for a seamless user ex
 | Ctrl+↓ | Font size -1 |
 | Alt+Wheel | Adjust font size |
 | Alt+drag | Create symbolic link |
+| Alt+B | Add selection to basket (no selection: open basket popup) |
 | Alt+1~9 | Jump to bookmark 1–9 |
 | Mouse Button 4 | Back |
 | Mouse Button 5 | Forward |
@@ -245,6 +253,34 @@ sudo apt install ffmpegthumbnailer
 ---
 
 ## 📋 Changelog
+
+### v1.52.0 (2026-07-17)
+- **3/4-pane multi-panel mode** — chain split: the 2nd panel's ◫ button opens a 3rd pane, the 3rd panel's opens a 4th; splitter ratios and pane paths saved per pane count; portal save dialogs, font shortcuts, bookmark sync and the rest all work in the extra panes
+- **Enlarge active pane option** — Settings → "Multi-pane"; in 3/4-pane mode the focused pane grows to 1.5× the others (off by default)
+- **Ctrl+S window sizing** — the size cycle scales with the pane count in 3/4-pane mode (clamped to the screen)
+- **Fixed panes growing while typing** — the status bar's type-ahead hint text was pushing up the pane's minimum width
+
+### v1.51.0 (2026-07-17)
+- **Thumbnail view for search results** — fixed files disappearing (folders only) when switching to thumbnail view during a search; search results now follow the view mode, with folder names as full-width group headers and file thumbnails beneath
+- **Search result operations hardened** — copy (Ctrl+C) / move / delete / rename (F2) / preview (F11) / context menu / double-click open / drag all work on search results in thumbnail view; deleting search results prunes empty folder headers; tag view (#) supported too
+
+### v1.50.0 (2026-07-17)
+- **Copy/move/delete overhaul** — fixed multi-second "not responding" freezes when moving large files across drives (F6) or permanently deleting (Shift+Del); triple-guarded against infinite copying when a folder is accidentally moved into its own subfolder; in-place copies now get an automatic new name, canceled copies clean up incomplete files, and file permissions are preserved on copy; Ctrl+Z undo now covers fast moves too
+- **Fixed silently-canceled saves (Chrome, etc.)** — the file picker no longer cancels a save when the target file doesn't exist yet
+- **Win+E reworked** — Windows 11's shell was blocking Win+E outright; now handled via a low-level keyboard hook — brings FileIyagi to the front if it's running, otherwise opens Explorer as usual
+- **Mouse/keyboard "File Explorer" key** — now opens a new FileIyagi window
+- **More reliable default file manager registration** — fixed other apps stealing the registered name, and a timeout that made Chrome's save dialog fall back to the system picker
+- **Settings improvements** — icon theme and folder color options, an open-source license viewer in About, settings window reorganized into Settings / Shortcuts / Help tabs
+- **Search & type-ahead** — wildcard (`*`, `?`) support in search, Space now cycles to the next type-ahead match
+
+### v1.48.8 (2026-07-08)
+- **Basket** — collect files from multiple folders (right-click → "Add to Basket" or `Alt+B`), then compress / copy / move / delete them all at once from the 🧺 status-bar popup; multi-folder compression produces a flat archive; items removed from disk are pruned automatically
+- **Shortcut in drop menu** — dropping a single file/folder now offers "Shortcut" (symbolic link) after Copy / Move, in both left- and right-button drag menus
+- **Search fixes** — Properties / Rename / F3 / F4 / Ctrl+D / paste target on a search result no longer act on the wrong file (tree-index bug); files opened from search results are now added to the Recent list; the status bar keeps a bold green "Search complete: N results" message with the accurate count; deleting from search results removes the rows immediately
+
+### v1.48.5 (2026-07-05)
+- **Connect to Server (Windows)** — full parity with the existing Linux feature: SMB/Samba shares and WebDAV (HTTP/HTTPS) connect as native Windows UNC paths; SFTP (vendored libssh2, WinCNG backend) and FTP (hand-rolled client — Qt6 dropped `QFtp`) browse through a dedicated virtual view
+- **SFTP/FTP files reach parity with local files** — F3 (view) and F4 (edit, with automatic upload-back on save) now work on remote files instead of doing nothing; right-click to download to a chosen folder, or straight to the other panel in dual-pane mode; right-click to upload the other panel's selected file(s) without a dialog
 
 ### v1.47.11 (2026-07-05)
 - **Complete 12-language UI** — all 682 UI strings professionally re-translated for 10 languages (German, Spanish, French, Indonesian, Portuguese, Russian, Turkish, Vietnamese + new: **Japanese, Chinese**); Korean also completed (311 previously missing strings, including the entire Settings dialog). New `tools/gpt_translate.py` export/import pipeline with placeholder validation replaces raw machine translation
