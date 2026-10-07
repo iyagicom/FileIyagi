@@ -11,8 +11,8 @@
 - **Up to four panes side by side.** Copy from one folder to another without juggling windows. Turn on 2, 3 or 4 panes with one click, and every pane remembers where it was.
 - **Servers feel like folders.** Connect to SFTP, SMB/Samba, FTP or WebDAV from the sidebar and browse them like local disks. Android phones and cameras (MTP) appear on their own.
 - **Find anything as you type.** The search box is always in the title bar. Results come in as you type, grouped by folder, and you can drag files straight out of the results.
-- **Look before you open.** Quick Preview (F11), built-in file compare (Ctrl+D), a text editor (F4), and thumbnails that stay cached.
-- **Keyboard first, like a classic commander.** F5 copy, F6 move, F7 new folder, F8 delete, F2 rename, pattern selection, a Basket for gathering files from many folders.
+- **Look before you open, fix it on the spot.** Quick Preview (F11), built-in file compare (Ctrl+D), a text editor (F4), an image editor that opens when you press F4 on a picture, and thumbnails that stay cached.
+- **Keyboard first, like a classic commander.** F7 copy, F6 move, F2 rename, Ctrl+N new folder, Del delete, Ctrl+Z undo, pattern selection, a Basket for gathering files from many folders.
 - **Same app on both systems.** Moving between Windows and Linux? Same layout, same shortcuts. On Windows it can even read your Linux EXT4 partitions.
 
 ## Features
@@ -21,7 +21,8 @@
 - Clickable breadcrumb path bar, direct path input (`Ctrl+L`), back/forward with mouse buttons
 - Favorites, drives and USB volumes in the sidebar; unmounted disks mount with one click
 - Details, list and three icon sizes; each folder remembers its view
-- Subfolder grid, hidden-file toggle, live font size (`Alt+Wheel`)
+- Subfolder grid (`Ctrl+Tab`) — on/off and sort order remembered per folder
+- Hidden-file toggle, live font size (`Alt+Wheel`)
 
 ### Multi-pane
 - 2/3/4-pane layouts with separate splitter memory for each count
@@ -35,9 +36,14 @@
 ### File operations
 - Copy/move with a destination picker and a visible queue you can edit
 - Select by pattern, "New folder from selection", new file from template
-- Compress and extract archives
+- Compress and extract archives — keep the Compress window open and gather files from several folders (Add Selection or drag and drop) into one archive
+- Compress and extract straight from search results
+- Batch rename, undo for file operations (`Ctrl+Z`)
+- Sync and back up two folders (`F10`)
 - Open With that remembers your choice per file type
 - File compare, quick preview, built-in text editor
+- Image editor (`F4`) — crop, rotate, resize, color, effects, and fit to a target file size
+- Music in the preview panel (`F11`) — the folder's songs become a playlist; unchecked songs are skipped
 
 ### Everyday touches
 - Three custom toolbar buttons you can point at any app or command
