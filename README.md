@@ -13,6 +13,7 @@
 - **Find anything as you type.** The search box is always in the title bar. Results come in as you type, grouped by folder, and you can drag files straight out of the results.
 - **Look before you open, fix it on the spot.** Quick Preview (F11), built-in file compare (Ctrl+D), a text editor (F4), an image editor that opens when you press F4 on a picture, and thumbnails that stay cached.
 - **Keyboard first, like a classic commander.** F7 copy, F6 move, F2 rename, Ctrl+N new folder, Del delete, Ctrl+Z undo, pattern selection, a Basket for gathering files from many folders.
+- **Burn CDs, DVDs and Blu-ray discs without another program** (Linux). Data discs, audio CDs and disc images — and a check afterwards that everything was written correctly. The burning engine is built in; nothing else to install.
 - **Same app on both systems.** Moving between Windows and Linux? Same layout, same shortcuts. On Windows it can even read your Linux EXT4 partitions.
 
 ## Features
@@ -80,6 +81,18 @@
 - **Send and receive files over the network**
 - **Windows: read Linux EXT4 partitions** — same views, sorting, copy and drag and drop
 - **Windows: recover permanently deleted files**
+
+### Disc burning — CD · DVD · Blu-ray (Linux)
+- **Data discs** — add files and folders and burn. Discs that are not closed can be added to later; **Close the disc** finishes one
+- **Verify after burning** — every file written is compared with the original by checksum
+- **Audio CDs** — MP3, FLAC, OGG, M4A, WAV and more are converted to CD audio automatically; reorder tracks with Up/Down
+- **Disc images** — burn an ISO, or save a disc as an ISO file (multi-session discs are saved with the files of every session)
+- **Erase / format** — CD-RW, DVD±RW, DVD-RAM, BD-RE
+- **Burn speed** — choose from the speeds the drive reports for the disc, or leave it to the drive. Slower burning writes more evenly
+- **Videos that start right away from the disc** — moves the playback index of phone and camera videos (MP4, MOV) to the front of the burned copy only; your originals are untouched
+- **Long names stay intact on Windows** — file names up to 103 characters, including Korean
+- Drives show in the sidebar even when empty, and inserting, ejecting or swapping a disc is picked up immediately. Videos on a disc wake the drive and read the playback index first, so they start reliably
+- **Disc thumbnails** — keep them in memory only, or save them on the hard disk in a separate folder for each disc (Settings → System); two discs with the same name never share thumbnails
 
 ### Part of the system
 - **Set as the default file manager** — one button from the title-bar icon
