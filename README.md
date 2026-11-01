@@ -29,6 +29,16 @@ Up to four panes side by side, servers, phones and discs in one sidebar, built-i
 | **Sidebar** | Bookmarks · devices (drives, USB, phones, CD/DVD drives) · servers · recent files · starred files · tags |
 | **Status bar** | Selection count and size · sort buttons · subfolder grid · 🧺 basket · ◫ split |
 
+### Two panes, and fixing files in place
+
+Each folder remembers its own view: thumbnails on the left, details on the right.
+
+![Two panes: thumbnails on the left, a detail list on the right](screenshot-two-panes.png)
+
+Open an image with `F4` and crop, adjust or mark it up without leaving the window. The original stays untouched until you press save.
+
+![Image editor — crop, rotate and scale tools](screenshot-image-editor.png)
+
 ## Features
 
 ### Getting around
