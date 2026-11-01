@@ -35,15 +35,6 @@ SFTP·SMB·FTP·WebDAV 와 안드로이드 휴대폰(MTP)을 사이드바에서 
 
 ![짧은 둘러보기 — 4칸, 이미지 편집기, 엑셀 편집, 동기화 미리 보기](fileiyagi-tour.gif)
 
-<details>
-<summary>화면 더 보기</summary>
-
-![FileIyagi](fileiyagi.png)
-
-![FileIyagi 2칸](fileiyagi2.png)
-
-</details>
-
 ## 그 밖의 장점
 
 핵심 기능 5가지 말고도 이런 점이 있습니다.

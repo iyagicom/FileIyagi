@@ -35,15 +35,6 @@ SFTP, SMB, FTP, WebDAV and Android phones (MTP) open straight from the sidebar, 
 
 ![A short tour — four panes, image editor, spreadsheet editor, sync preview](fileiyagi-tour.gif)
 
-<details>
-<summary>More screenshots</summary>
-
-![FileIyagi](fileiyagi.png)
-
-![FileIyagi, two panes](fileiyagi2.png)
-
-</details>
-
 ## And also
 
 Beyond the five key features above:
