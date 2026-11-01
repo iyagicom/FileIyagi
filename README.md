@@ -1,10 +1,13 @@
 # FileIyagi
 
-**A file manager for Windows and Linux — up to four panes side by side, servers, phones and discs in one sidebar, and files you can view and edit without opening another program.**
+**Find, gather, move, open, edit and compare files in one window — a file workbench for Windows and Linux.**
+Up to four panes side by side, servers, phones and discs in one sidebar, built-in viewers and editors, and 20-step undo.
 
 [English](README.md) · [한국어](README_ko.md)
 
 ![FileIyagi](fileiyagi.png)
+
+![FileIyagi, two panes — list view on the left, thumbnail view on the right](fileiyagi2.png)
 
 ## Why FileIyagi
 
