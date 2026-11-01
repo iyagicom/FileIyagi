@@ -7,25 +7,25 @@ Up to four panes side by side, servers, phones and discs in one sidebar, built-i
 
 [English](README.md) · [한국어](README_ko.md)
 
-![FileIyagi with four panes — thumbnails for drawings and photos, lists for documents and backups](fileiyagi-4panes.png)
+![FileIyagi with four panes — thumbnails for drawings and photos, a list for documents, and an initial-consonant search in the last pane (ㅍㅁㄷ → 평면도)](fileiyagi-4panes.png)
 
 ## Key features
 
 ### 1. Up to four panes in one window
-Thumbnails for drawings, a detail list for documents — every pane remembers its own folder and view. Copy or move from one pane to another without juggling windows. Korean initials work in search too (ㄷㅁ → 도면).
+Thumbnails for drawings, a detail list for documents — every pane remembers its own folder and view. Copy or move from one pane to another without juggling windows. Korean initials work in search too — the last pane above shows the result of searching `ㅍㅁㄷ` (평면도).
 
 ### 2. Fix files on the spot, without opening another app (`F4`)
 
 | Image editor | Excel (.xlsx) editor |
 |---|---|
-| ![Image editor — arrow, text and mosaic tools](fileiyagi-image-editor.png) | ![Spreadsheet editor — open and edit .xlsx without Excel](fileiyagi-xlsx-editor.png) |
+| ![Image editor — an account number hidden with mosaic and an arrow added](fileiyagi-image-editor.png) | ![Spreadsheet editor — a monthly sales table (.xlsx, with formulas) opened without Excel](fileiyagi-xlsx-editor.png) |
 
-Images: crop, rotate, resize, colour, effects and drawing (arrows, text, mosaic). Text: a text editor with Text Cook. **The original stays untouched until you press save.**
+Images: crop, rotate, resize, colour, effects and drawing (arrows, text, mosaic). Text: a text editor with Text Cook. Areas hidden with mosaic are really thrown away and cannot be recovered. **The original stays untouched until you press save.**
 
 ### 3. Sync and backup with a preview (`F10`)
 See what will be copied in a table first, then run it. Pick one-way backup (new and changed files only) or two-way sync.
 
-![Sync + Backup — the files that will change, listed before you run](fileiyagi-sync-preview.png)
+![Sync + Backup — new and changed files (right-hand size and date compared) listed before you run](fileiyagi-sync-preview.png)
 
 ### 4. Servers, phones and discs like local folders
 SFTP, SMB, FTP, WebDAV and Android phones (MTP) open straight from the sidebar, and an SFTP/SSH folder gets a remote terminal. On Windows you can read Linux EXT4 partitions too.
@@ -44,14 +44,12 @@ SFTP, SMB, FTP, WebDAV and Android phones (MTP) open straight from the sidebar, 
 
 </details>
 
-## Why FileIyagi
+## And also
 
-- **Up to four panes.** Copy from one folder to another without juggling windows. Turn on 2, 3 or 4 panes with one button; each pane remembers where it was.
+Beyond the five key features above:
+
 - **Every folder keeps its own look.** Big thumbnails for photos, details for documents — view mode and sort order are remembered per folder and come back next time.
-- **Search as you type.** The search box lives in the title bar. Pause typing and it searches every subfolder, results grouped by folder. Korean initials work too (ㄷㅁ → 도면).
-- **Servers feel like folders.** SFTP, SMB, FTP and WebDAV behave like a local disk; Android phones and cameras show up when plugged in.
-- **Look before you open, fix it on the spot.** Viewer for images, PDF, text, music and Excel; an image editor (crop, obscure, fit to a file size); a text editor with Text Cook; file compare.
-- **Mistakes can be undone.** `Ctrl+Z` undoes copy, move, delete and rename, 20 steps deep. Even permanently deleted files (`Shift+Del`) can be brought back for 3 days.
+- **Search as you type.** The search box lives in the title bar. Pause typing and it searches every subfolder, results grouped by folder; filter by text inside files, date or size.
 - **Burn CDs, DVDs and Blu-rays without another program.** Data discs, audio CDs and disc images, checked against the originals after burning.
 - **The same app on both systems.** Same screens and the same shortcuts on Windows and Linux.
 
