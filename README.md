@@ -3,11 +3,46 @@
 **Find, gather, move, open, edit and compare files in one window — a file workbench for Windows and Linux.**
 Up to four panes side by side, servers, phones and discs in one sidebar, built-in viewers and editors, and 20-step undo.
 
+**[⬇ Get the latest version](https://github.com/iyagicom/FileIyagi/releases/latest)** · Windows: [Microsoft Store](https://apps.microsoft.com/search?query=FileIyagi) · Linux: deb · rpm · zst · AppImage · zip ([download guide](#download))
+
 [English](README.md) · [한국어](README_ko.md)
+
+![FileIyagi with four panes — thumbnails for drawings and photos, lists for documents and backups](fileiyagi-4panes.png)
+
+## Key features
+
+### 1. Up to four panes in one window
+Thumbnails for drawings, a detail list for documents — every pane remembers its own folder and view. Copy or move from one pane to another without juggling windows. Korean initials work in search too (ㄷㅁ → 도면).
+
+### 2. Fix files on the spot, without opening another app (`F4`)
+
+| Image editor | Excel (.xlsx) editor |
+|---|---|
+| ![Image editor — arrow, text and mosaic tools](fileiyagi-image-editor.png) | ![Spreadsheet editor — open and edit .xlsx without Excel](fileiyagi-xlsx-editor.png) |
+
+Images: crop, rotate, resize, colour, effects and drawing (arrows, text, mosaic). Text: a text editor with Text Cook. **The original stays untouched until you press save.**
+
+### 3. Sync and backup with a preview (`F10`)
+See what will be copied in a table first, then run it. Pick one-way backup (new and changed files only) or two-way sync.
+
+![Sync + Backup — the files that will change, listed before you run](fileiyagi-sync-preview.png)
+
+### 4. Servers, phones and discs like local folders
+SFTP, SMB, FTP, WebDAV and Android phones (MTP) open straight from the sidebar, and an SFTP/SSH folder gets a remote terminal. On Windows you can read Linux EXT4 partitions too.
+
+### 5. Mistakes can be undone
+`Ctrl+Z` undoes copy, move, delete and rename, 20 steps deep; permanently deleted files (`Shift+Del`) can be brought back for 3 days. Copying to a USB drive is only reported as finished after it has really been written.
+
+![A short tour — four panes, image editor, spreadsheet editor, sync preview](fileiyagi-tour.gif)
+
+<details>
+<summary>More screenshots</summary>
 
 ![FileIyagi](fileiyagi.png)
 
-![FileIyagi, two panes — list view on the left, thumbnail view on the right](fileiyagi2.png)
+![FileIyagi, two panes](fileiyagi2.png)
+
+</details>
 
 ## Why FileIyagi
 
@@ -28,16 +63,6 @@ Up to four panes side by side, servers, phones and discs in one sidebar, built-i
 | **Toolbar** | Back, forward, up · path bar · blue ★ (bookmark this folder) · recent folders · ① (single-click opens folders) · hidden files · view mode · preview (F11) |
 | **Sidebar** | Bookmarks · devices (drives, USB, phones, CD/DVD drives) · servers · recent files · starred files · tags |
 | **Status bar** | Selection count and size · sort buttons · subfolder grid · 🧺 basket · ◫ split |
-
-### Two panes, and fixing files in place
-
-Each folder remembers its own view: thumbnails on the left, details on the right.
-
-![Two panes: thumbnails on the left, a detail list on the right](screenshot-two-panes.png)
-
-Open an image with `F4` and crop, adjust or mark it up without leaving the window. The original stays untouched until you press save.
-
-![Image editor — crop, rotate and scale tools](screenshot-image-editor.png)
 
 ## Features
 
