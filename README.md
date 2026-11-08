@@ -7,7 +7,7 @@ Up to four panes side by side, servers, phones and discs in one sidebar, built-i
 
 [English](README.md) · [한국어](README_ko.md)
 
-![FileIyagi with four panes — thumbnails for drawings and photos, a list for documents, and an initial-consonant search in the last pane (ㅍㅁㄷ → 평면도)](promo/screens/fileiyagi-4panes.png)
+![FileIyagi with four panes — thumbnails for drawings and photos, a list for documents, and an initial-consonant search in the last pane (ㅍㅁㄷ → 평면도)](fileiyagi-4panes.png)
 
 ## Key features
 
@@ -18,14 +18,14 @@ Thumbnails for drawings, a detail list for documents — every pane remembers it
 
 | Image editor | Excel (.xlsx) editor |
 |---|---|
-| ![Image editor — an account number hidden with mosaic and an arrow added](promo/screens/fileiyagi-image-editor.png) | ![Spreadsheet editor — a monthly sales table (.xlsx, with formulas) opened without Excel](promo/screens/fileiyagi-xlsx-editor.png) |
+| ![Image editor — an account number hidden with mosaic and an arrow added](fileiyagi-image-editor.png) | ![Spreadsheet editor — a monthly sales table (.xlsx, with formulas) opened without Excel](fileiyagi-xlsx-editor.png) |
 
 Images: crop, rotate, resize, colour, effects and drawing (arrows, text, mosaic). Text: a text editor with Text Cook. Areas hidden with mosaic are really thrown away and cannot be recovered. **The original stays untouched until you press save.**
 
 ### 3. Sync and backup with a preview (`F10`)
 See what will be copied in a table first, then run it. Pick one-way backup (new and changed files only) or two-way sync.
 
-![Sync + Backup — new and changed files (right-hand size and date compared) listed before you run](promo/screens/fileiyagi-sync-preview.png)
+![Sync + Backup — new and changed files (right-hand size and date compared) listed before you run](fileiyagi-sync-preview.png)
 
 ### 4. Servers, phones and discs like local folders
 SFTP, SMB, FTP, WebDAV and Android phones (MTP) open straight from the sidebar, and an SFTP/SSH folder gets a remote terminal. On Windows you can read Linux EXT4 partitions too.
