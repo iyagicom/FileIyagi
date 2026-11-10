@@ -35,7 +35,10 @@ SFTP, SMB, FTP, WebDAV and Android phones (MTP) open straight from the sidebar, 
 
 ![A short tour — four panes, image editor, spreadsheet editor, sync preview](fileiyagi-tour.gif)
 
-## New in v2.46.1
+## Recently added
+- **Phone photos (HEIC) at full quality** — the viewer (`F3`) shows HEIC photos at their original resolution and keeps the phone's wide colour (Display P3). Photos and thumbnails stay sharp on scaled (HiDPI) displays.
+- **Zoom where the mouse points** — in the viewer, `Ctrl+wheel` zooms around the mouse pointer; the horizontal wheel or `Shift+wheel` pans sideways.
+- **Merge text files** — select several text files and right-click "Merge" to join them into one.
 - **Find anything** (`Ctrl+F` twice) — search commands, folders and files, with Korean initial-consonant search and a quick filter for the current folder.
 - **Tabs in every pane** — keep separate folders open in each pane.
 - **Browse archives before extracting** — open an archive like a folder and extract selected items.
@@ -44,8 +47,8 @@ SFTP, SMB, FTP, WebDAV and Android phones (MTP) open straight from the sidebar, 
 - **Pin files and folders** to keep them at the top of a folder.
 - **Run files in a terminal** — use the right-click menu or `Shift+F9`.
 - **Narrow lists and remote folders** — size, date and extension stay visible beside long names; Linux SFTP listings load in the background.
-- **Photo serial matching** — read module numbers from photos and place them in matching spreadsheets. Linux support is available; the Windows package still needs its OCR runtime.
-- **Improved Back navigation and browser attachments.**
+- **Photo serial matching** — read module numbers from label photos and place them in matching spreadsheets (Linux edition for now).
+- **Back navigation and browser attachments** — after a search, the mouse back button, `Backspace` or `Alt+←` returns to the folder you searched; when attaching a file in Chrome, the FileIyagi window comes to the front.
 
 ## And also
 
@@ -136,6 +139,7 @@ Beyond the five key features above:
 - **Viewer** (`F3`) — images, PDF, text, music and Excel (.xlsx) in one window
   - `←/→` previous/next file of the same kind, `Home/End` first/last
   - Images: slideshow (`Space` pauses), full screen (`F`), rotate (`R`/`Shift+R`), "Apply to all photos" keeps the angle for the next ones
+  - Photo zoom: `Ctrl+wheel` (around the mouse pointer), pan sideways with the horizontal wheel or `Shift+wheel`. HEIC opens at full resolution
   - PDF: pages (`PgUp/PgDn`), zoom (`+/-`) · text: find (`Ctrl+F`) · print (`Ctrl+P`)
 - **Quick preview** (`F11`) — images, text, music and video beside the list as you select. Music turns the folder into a playlist and skips unchecked songs. With "keep playing after closing", music continues after F11 closes and a small player bar remains. Choose the audio output device
 - **Compare** (`Ctrl+D`) — two files side by side, differences marked
